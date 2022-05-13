@@ -15,5 +15,16 @@ read_data <- function() {
   names(household_power) <- col.names 
   subpower <- subset(household_power, 
                      Date == "1/2/2007" | Date == "2/2/2007")
+  
+  ## Convert to numeric
+  subpower$Global_active_power <- 
+    as.numeric(subpower$Global_active_power)
+  subpower$Global_reactive_power <- 
+    as.numeric(subpower$Global_reactive_power)
+  subpower$Voltage <- as.numeric((subpower$Voltage))
+  subpower$Global_intensity <- as.numeric(subpower$Global_intensity)
+  subpower$Submetering_1 <- as.numeric(subpower$Submetering_1)
+  subpower$Submetering_2 <- as.numeric(subpower$Submetering_2)  
+  subpower$Submetering_3 <- as.numeric(subpower$Submetering_3)
   subpower  # return selection
 }
