@@ -26,4 +26,4 @@ The following files are included:
     
     d- Global Reactive Power
     
-  The plots are save in plot4.png.
+  The plots are saved in plot4.png.
